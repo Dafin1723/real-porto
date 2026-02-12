@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Portfolio - Project Detail</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .project-detail {
+            padding: 8rem 0 4rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .back-button:hover {
+            color: var(--accent);
+            transform: translateX(-5px);
+        }
+        
+        .project-header {
+            margin-bottom: 4rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .project-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .detail-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .detail-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            line-height: 1.8;
+        }
+        
+        .project-content {
+            display: grid;
+            gap: 4rem;
+        }
+        
+        .content-section {
+            padding: 3rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        
+        .content-section p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            aspect-ratio: 16/10;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .gallery-item:hover {
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .journal-entry {
+            padding: 2rem;
+            background: var(--bg-tertiary);
+            border-left: 2px solid var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        
+        .journal-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .journal-text {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .tech-stack-detail {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tech-item {
+            padding: 1.5rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+        
+        .tech-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .tech-item h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .design-principles {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .principle-item {
+            padding: 1.5rem;
+            background: var(--bg-tertiary);
+            border-left: 3px solid var(--accent);
+        }
+
+        .principle-item h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .principle-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">MDF</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">Tentang</a></li>
+                <li><a href="index.html#projects">Proyek</a></li>
+                <li><a href="index.html#skills">Keahlian</a></li>
+                <li><a href="index.html#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Detail -->
+    <section class="project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Kembali ke Portfolio
+            </a>
+
+            <div class="project-header">
+                <div class="project-meta">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        November 2023
+                    </span>
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Web Design
+                    </span>
+                </div>
+                <h1 class="detail-title">Landing Page Portfolio</h1>
+                <p class="detail-description">
+                    Landing page portfolio pribadi dengan fokus pada desain minimalis yang elegan dan 
+                    animasi yang smooth. Proyek ini dibuat untuk menampilkan karya-karya saya dengan 
+                    cara yang professional dan eye-catching.
+                </p>
+            </div>
+
+            <div class="project-content">
+                <!-- Overview -->
+                <div class="content-section">
+                    <h2>Ringkasan Proyek</h2>
+                    <p>
+                        Landing page ini adalah proyek pertama saya dalam membuat portfolio personal. 
+                        Tujuannya adalah untuk memiliki online presence yang professional dan showcase 
+                        projects yang telah saya kerjakan.
+                    </p>
+                    <p>
+                        Fokus utama dalam proyek ini adalah pada visual design dan user experience. 
+                        Saya ingin membuat landing page yang tidak hanya informatif, tapi juga visually 
+                        appealing dengan animasi yang smooth dan interactive elements.
+                    </p>
+
+                    <div class="design-principles">
+                        <div class="principle-item">
+                            <h4>Minimalist Design</h4>
+                            <p>
+                                Menggunakan whitespace secara efektif dan fokus pada konten penting. 
+                                Menghindari clutter dan membuat hierarchy yang jelas.
+                            </p>
+                        </div>
+                        <div class="principle-item">
+                            <h4>Typography First</h4>
+                            <p>
+                                Memilih font yang readable dan elegant. Menggunakan font pairing yang 
+                                harmonis untuk heading dan body text.
+                            </p>
+                        </div>
+                        <div class="principle-item">
+                            <h4>Smooth Animations</h4>
+                            <p>
+                                Implementasi CSS animations untuk meningkatkan user experience tanpa 
+                                mengganggu loading speed.
+                            </p>
+                        </div>
+                        <div class="principle-item">
+                            <h4>Responsive Layout</h4>
+                            <p>
+                                Memastikan design terlihat perfect di semua screen sizes dengan 
+                                mobile-first approach.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Journal -->
+                <div class="content-section">
+                    <h2>Jurnal Pengembangan</h2>
+                    
+                    <div class="journal-entry">
+                        <div class="journal-date">Week 1 - Research & Inspiration</div>
+                        <p class="journal-text">
+                            Memulai dengan research, melihat berbagai portfolio website untuk inspirasi. 
+                            Membuat mood board di Pinterest dan mengumpulkan referensi design. Menentukan 
+                            color palette dan typography yang akan digunakan. Proses ini sangat penting 
+                            untuk mendapatkan direction yang jelas.
+                        </p>
+                    </div>
+
+                    <div class="journal-entry">
+                        <div class="journal-date">Week 2 - Design Mockup</div>
+                        <p class="journal-text">
+                            Membuat wireframe low-fidelity di kertas, lalu membuat high-fidelity mockup 
+                            di Figma. Eksperimen dengan berbagai layout dan composition. Mendapat feedback 
+                            dari teman dan melakukan beberapa iterasi design. Final mockup selesai dengan 
+                            detail yang comprehensive.
+                        </p>
+                    </div>
+
+                    <div class="journal-entry">
+                        <div class="journal-date">Week 3 - HTML & CSS Development</div>
+                        <p class="journal-text">
+                            Mulai coding dengan HTML structure yang semantic. Implementasi CSS dengan 
+                            custom properties untuk maintainability. Fokus pada responsive design sejak 
+                            awal. Belajar banyak tentang CSS Grid dan Flexbox dalam proses ini. Tantangan 
+                            terbesar adalah membuat animation yang smooth tanpa affecting performance.
+                        </p>
+                    </div>
+
+                    <div class="journal-entry">
+                        <div class="journal-date">Week 4 - Refinement & Deployment</div>
+                        <p class="journal-text">
+                            Testing di berbagai browser dan devices. Optimize images dan assets untuk 
+                            fast loading. Menambahkan meta tags untuk SEO. Deploy menggunakan GitHub Pages. 
+                            Sangat puas dengan hasil akhirnya!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Technology Stack -->
+                <div class="content-section">
+                    <h2>Teknologi yang Digunakan</h2>
+                    <div class="tech-stack-detail">
+                        <div class="tech-item">
+                            <h4>HTML5</h4>
+                            <p>Semantic markup</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>CSS3</h4>
+                            <p>Custom properties & animations</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Figma</h4>
+                            <p>Design & prototyping</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>GitHub Pages</h4>
+                            <p>Hosting & deployment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery -->
+                <div class="content-section">
+                    <h2>Dokumentasi & Screenshot</h2>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <span>Screenshot 1<br>Hero Section</span>
+                        </div>
+                        <div class="gallery-item">
+                            <span>Screenshot 2<br>Projects Showcase</span>
+                        </div>
+                        <div class="gallery-item">
+                            <span>Screenshot 3<br>About Section</span>
+                        </div>
+                        <div class="gallery-item">
+                            <span>Screenshot 4<br>Contact Form</span>
+                        </div>
+                        <div class="gallery-item">
+                            <span>Foto 5<br>Figma Mockup</span>
+                        </div>
+                        <div class="gallery-item">
+                            <span>Foto 6<br>Mobile Version</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lessons Learned -->
+                <div class="content-section">
+                    <h2>Yang Saya Pelajari</h2>
+                    <p>
+                        Proyek landing page ini mengajarkan saya banyak tentang web design principles 
+                        dan importance of user-centered design. Saya belajar bahwa good design bukan 
+                        hanya tentang aesthetics, tapi juga tentang functionality dan user experience.
+                    </p>
+                    <p>
+                        Process dari research hingga deployment memberikan saya complete understanding 
+                        tentang web development workflow. Saya juga belajar pentingnya iteration dan 
+                        getting feedback untuk improve design.
+                    </p>
+                    <p>
+                        Secara teknis, saya menjadi lebih mahir dalam CSS, terutama dalam hal animations, 
+                        responsive design, dan modern layout techniques. Saya juga lebih appreciate 
+                        pentingnya performance optimization untuk better user experience.
+                    </p>
+                    <p>
+                        Project ini menjadi foundation yang solid untuk portfolio saya dan membuka 
+                        opportunities untuk projects lain. Sangat proud dengan apa yang telah saya achieve!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Muhamad Dafin Rifat Zulfaqqar. Dibuat dengan semangat belajar.</p>
+        </div>
+    </footer>
+</body>
+</html>

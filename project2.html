@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App - Project Detail</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .project-detail {
+            padding: 8rem 0 4rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .back-button:hover {
+            color: var(--accent);
+            transform: translateX(-5px);
+        }
+        
+        .project-header {
+            margin-bottom: 4rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .project-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .detail-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .detail-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            line-height: 1.8;
+        }
+        
+        .project-content {
+            display: grid;
+            gap: 4rem;
+        }
+        
+        .content-section {
+            padding: 3rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+        }
+        
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        
+        .content-section p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            aspect-ratio: 16/10;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .gallery-item:hover {
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .journal-entry {
+            padding: 2rem;
+            background: var(--bg-tertiary);
+            border-left: 2px solid var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        
+        .journal-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .journal-text {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .tech-stack-detail {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tech-item {
+            padding: 1.5rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+        
+        .tech-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .tech-item h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .features-list li {
+            padding: 1rem;
+            background: var(--bg-tertiary);
+            margin-bottom: 0.75rem;
+            border-left: 2px solid var(--accent);
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">MDF</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">Tentang</a></li>
+                <li><a href="index.html#projects">Proyek</a></li>
+                <li><a href="index.html#skills">Keahlian</a></li>
+                <li><a href="index.html#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Detail -->
+    <section class="project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Kembali ke Portfolio
+            </a>
+
+            <div class="project-header">
+                <div class="project-meta">
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Maret 2024
+                    </span>
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Web Application
+                    </span>
+                </div>
+                <h1 class="detail-title">To-Do List App</h1>
+                <p class="detail-description">
+                    Aplikasi manajemen tugas yang powerful namun sederhana, dibangun untuk membantu meningkatkan 
+                    produktivitas sehari-hari. Dilengkapi dengan local storage untuk persistensi data dan 
+                    interface yang intuitif.
+                </p>
+            </div>
+
+            <div class="project-content">
+                <!-- Overview -->
+                <div class="content-section">
+                    <h2>Ringkasan Proyek</h2>
+                    <p>
+                        To-Do List App adalah proyek personal yang saya kembangkan untuk belajar tentang 
+                        JavaScript DOM manipulation dan browser storage. Aplikasi ini memungkinkan user 
+                        untuk menambah, mengedit, dan menghapus task dengan mudah.
+                    </p>
+                    <p>
+                        Fitur unggulan dari aplikasi ini adalah kemampuan untuk menyimpan data secara 
+                        lokal di browser menggunakan LocalStorage API, sehingga task tidak hilang meskipun 
+                        browser ditutup.
+                    </p>
+
+                    <ul class="features-list">
+                        <li><strong>Add Task:</strong> Menambahkan task baru dengan timestamp</li>
+                        <li><strong>Edit Task:</strong> Mengubah deskripsi task yang sudah ada</li>
+                        <li><strong>Delete Task:</strong> Menghapus task yang sudah selesai</li>
+                        <li><strong>Mark Complete:</strong> Tandai task sebagai selesai</li>
+                        <li><strong>Filter:</strong> Filter task berdasarkan status (all, active, completed)</li>
+                        <li><strong>Persistent Storage:</strong> Data tersimpan di browser</li>
+                    </ul>
+                </div>
+
+                <!-- Journal -->
+                <div class="content-section">
+                    <h2>Jurnal Pengembangan</h2>
+                    
+                    <div class="journal-entry">
+                        <div class="journal-date">Hari 1-2 - UI Design</div>
+                        <p class="journal-text">
+                            Memulai dengan sketsa UI di kertas, lalu membuat mockup sederhana. Fokus pada 
+                            minimalism dan ease of use. Membuat HTML structure dan basic styling dengan CSS. 
+                            Menentukan color scheme yang eye-friendly untuk penggunaan jangka panjang.
+                        </p>
+                    </div>
+
+                    <div class="journal-entry">
+                        <div class="journal-date">Hari 3-5 - Core Functionality</div>
+                        <p class="journal-text">
+                            Implementasi JavaScript untuk CRUD operations. Belajar tentang event listeners, 
+                            DOM manipulation, dan array methods. Tantangan terbesar adalah mengatur state 
+                            management dan memastikan UI selalu sync dengan data. Debugging memakan banyak 
+                            waktu tapi sangat valuable learning experience.
+                        </p>
+                    </div>
+
+                    <div class="journal-entry">
+                        <div class="journal-date">Hari 6-7 - LocalStorage Integration</div>
+                        <p class="journal-text">
+                            Implementasi LocalStorage untuk data persistence. Belajar tentang JSON.stringify 
+                            dan JSON.parse untuk menyimpan dan retrieve data. Menambahkan fitur filter dan 
+                            improve overall user experience dengan animasi CSS.
+                        </p>
+                    </div>
+
+                    <div class="journal-entry">
+                        <div class="journal-date">Hari 8 - Testing & Polish</div>
+                        <p class="journal-text">
+                            Testing berbagai edge cases, fixing bugs, dan improving code quality. Menambahkan 
+                            error handling dan validasi input. Optimize performance dan menambahkan responsive 
+                            design untuk mobile devices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Technology Stack -->
+                <div class="content-section">
+                    <h2>Teknologi yang Digunakan</h2>
+                    <div class="tech-stack-detail">
+                        <div class="tech-item">
+                            <h4>HTML5</h4>
+                            <p>Semantic structure</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>CSS3</h4>
+                            <p>Modern styling & animations</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>JavaScript ES6</h4>
+                            <p>Core functionality</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>LocalStorage API</h4>
+                            <p>Data persistence</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery -->
+                <div class="content-section">
+                    <h2>Dokumentasi & Screenshot</h2>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <span>Screenshot 1<br>Main Interface</span>
+                        </div>
+                        <div class="gallery-item">
+                            <span>Screenshot 2<br>Add Task Form</span>
+                        </div>
+                        <div class="gallery-item">
+                            <span>Screenshot 3<br>Task List View</span>
+                        </div>
+                        <div class="gallery-item">
+                            <span>Screenshot 4<br>Filter Feature</span>
+                        </div>
+                        <div class="gallery-item">
+                            <span>Foto 5<br>Mobile View</span>
+                        </div>
+                        <div class="gallery-item">
+                            <span>Foto 6<br>Code Structure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lessons Learned -->
+                <div class="content-section">
+                    <h2>Yang Saya Pelajari</h2>
+                    <p>
+                        Proyek ini sangat membantu saya memahami JavaScript fundamentals dengan lebih baik. 
+                        Saya belajar tentang event-driven programming, state management, dan bagaimana 
+                        membuat aplikasi yang interactive.
+                    </p>
+                    <p>
+                        Pengalaman dengan LocalStorage API memberikan saya insight tentang browser storage 
+                        dan data persistence. Saya juga belajar pentingnya error handling dan input validation 
+                        untuk mencegah bugs dan meningkatkan user experience.
+                    </p>
+                    <p>
+                        Challenge dalam membuat aplikasi ini mengajarkan saya untuk lebih teliti dalam 
+                        debugging dan testing. Saya juga lebih menghargai pentingnya clean code dan 
+                        proper documentation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Muhamad Dafin Rifat Zulfaqqar. Dibuat dengan semangat belajar.</p>
+        </div>
+    </footer>
+</body>
+</html>
