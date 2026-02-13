@@ -544,6 +544,19 @@ main {
     transition: var(--transition-smooth);
 }
 
+.skill-sertif {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.skill-sertif img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
 .skill-category:hover .skill-icon {
     color: var(--accent);
 }
