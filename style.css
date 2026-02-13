@@ -36,6 +36,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;     /* FIX: anchor link (#contact dll) gak ketutup navbar */
 }
 
 body {
@@ -45,6 +46,10 @@ body {
     line-height: 1.7;
     font-weight: 300;
     overflow-x: hidden;
+    padding-top: 100px;            /* FIX UTAMA: ruang atas biar navbar fixed gak nutup konten */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ==========================================
@@ -342,6 +347,11 @@ section {
     border-top: 1px solid var(--border);
 }
 
+/* Wrap semua section di <main> supaya flex bekerja (tambahkan di HTML kalau belum) */
+main {
+    flex: 1 0 auto;
+}
+
 .section-header {
     margin-bottom: var(--spacing-lg);
     display: flex;
@@ -568,6 +578,10 @@ section {
 /* ==========================================
    CONTACT SECTION
    ========================================== */
+.contact {
+    padding: 8rem 0 6rem;          /* Lebih lega biar gak nempel footer */
+}
+
 .contact-content {
     max-width: 800px;
 }
@@ -649,9 +663,10 @@ section {
    FOOTER
    ========================================== */
 .footer {
-    padding: 3rem 0;
+    padding: 5rem 0 3rem;
     border-top: 1px solid var(--border);
     text-align: center;
+    margin-top: auto;              /* FIX: dorong ke bawah kalau konten pendek */
 }
 
 .footer p {
@@ -763,6 +778,14 @@ section {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    body {
+        padding-top: 90px;         /* sedikit lebih kecil di mobile */
+    }
+
+    html {
+        scroll-padding-top: 90px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -776,6 +799,14 @@ section {
     
     .contact-text h3 {
         font-size: 2rem;
+    }
+
+    body {
+        padding-top: 80px;
+    }
+
+    html {
+        scroll-padding-top: 80px;
     }
 }
 

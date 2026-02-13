@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List App - Project Detail</title>
+    <title>Website Sekolah Modern - Project Detail</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -156,19 +156,6 @@
             font-size: 0.85rem;
             color: var(--text-muted);
         }
-
-        .features-list {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .features-list li {
-            padding: 1rem;
-            background: var(--bg-tertiary);
-            margin-bottom: 0.75rem;
-            border-left: 2px solid var(--accent);
-            color: var(--text-secondary);
-        }
     </style>
 </head>
 <body>
@@ -196,7 +183,7 @@
                 Kembali ke Portfolio
             </a>
 
-            <div class="project-header">
+                <div class="project-header">
                 <div class="project-meta">
                     <span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -205,21 +192,22 @@
                             <line x1="8" y1="2" x2="8" y2="6"></line>
                             <line x1="3" y1="10" x2="21" y2="10"></line>
                         </svg>
-                        Maret 2024
+                        Januari 2025
                     </span>
                     <span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
-                        Web Application
+                        Networking
                     </span>
                 </div>
-                <h1 class="detail-title">To-Do List App</h1>
+                <h1 class="detail-title">Simulasi Jaringan RT/RW Net</h1>
                 <p class="detail-description">
-                    Aplikasi manajemen tugas yang powerful namun sederhana, dibangun untuk membantu meningkatkan 
-                    produktivitas sehari-hari. Dilengkapi dengan local storage untuk persistensi data dan 
-                    interface yang intuitif.
+                    Proyek simulasi jaringan RT/RW Net yang saya buat untuk memahami konsep distribusi internet 
+                    dalam skala lingkungan. Walaupun masih tahap simulasi kecil dan belum implementasi langsung, 
+                    proyek ini memberi pemahaman tentang alur kerja jaringan, manajemen bandwidth, serta 
+                     konfigurasi perangkat yang umum digunakan pada layanan RT/RW Net.
                 </p>
             </div>
 
@@ -228,24 +216,15 @@
                 <div class="content-section">
                     <h2>Ringkasan Proyek</h2>
                     <p>
-                        To-Do List App adalah proyek personal yang saya kembangkan untuk belajar tentang 
-                        JavaScript DOM manipulation dan browser storage. Aplikasi ini memungkinkan user 
-                        untuk menambah, mengedit, dan menghapus task dengan mudah.
+                        Proyek ini merupakan simulasi jaringan RT/RW Net sebagai latihan memahami bagaimana 
+                        internet didistribusikan dari satu sumber ke banyak pengguna. Simulasi dilakukan dengan 
+                        topologi jaringan sederhana, konfigurasi IP addressing, routing, serta pembagian bandwidth.
                     </p>
                     <p>
-                        Fitur unggulan dari aplikasi ini adalah kemampuan untuk menyimpan data secara 
-                        lokal di browser menggunakan LocalStorage API, sehingga task tidak hilang meskipun 
-                        browser ditutup.
+                        Fokus utama proyek ini adalah memahami konsep kerja jaringan ISP skala kecil. Dari simulasi 
+                        ini saya mendapat gambaran tentang manajemen user, kestabilan koneksi, serta dasar 
+                        troubleshooting jaringan.
                     </p>
-
-                    <ul class="features-list">
-                        <li><strong>Add Task:</strong> Menambahkan task baru dengan timestamp</li>
-                        <li><strong>Edit Task:</strong> Mengubah deskripsi task yang sudah ada</li>
-                        <li><strong>Delete Task:</strong> Menghapus task yang sudah selesai</li>
-                        <li><strong>Mark Complete:</strong> Tandai task sebagai selesai</li>
-                        <li><strong>Filter:</strong> Filter task berdasarkan status (all, active, completed)</li>
-                        <li><strong>Persistent Storage:</strong> Data tersimpan di browser</li>
-                    </ul>
                 </div>
 
                 <!-- Journal -->
@@ -253,39 +232,27 @@
                     <h2>Jurnal Pengembangan</h2>
                     
                     <div class="journal-entry">
-                        <div class="journal-date">Hari 1-2 - UI Design</div>
+                        <div class="journal-date">Tahap Perencanaan</div>
                         <p class="journal-text">
-                            Memulai dengan sketsa UI di kertas, lalu membuat mockup sederhana. Fokus pada 
-                            minimalism dan ease of use. Membuat HTML structure dan basic styling dengan CSS. 
-                            Menentukan color scheme yang eye-friendly untuk penggunaan jangka panjang.
+                            Melakukan riset tentang sistem RT/RW Net, perangkat yang digunakan, serta cara 
+                            distribusi jaringan. Membuat topologi awal sebagai dasar simulasi.
                         </p>
                     </div>
 
                     <div class="journal-entry">
-                        <div class="journal-date">Hari 3-5 - Core Functionality</div>
+                        <div class="journal-date">Tahap Simulasi</div>
                         <p class="journal-text">
-                            Implementasi JavaScript untuk CRUD operations. Belajar tentang event listeners, 
-                            DOM manipulation, dan array methods. Tantangan terbesar adalah mengatur state 
-                            management dan memastikan UI selalu sync dengan data. Debugging memakan banyak 
-                            waktu tapi sangat valuable learning experience.
+                            Mengatur konfigurasi jaringan seperti IP addressing, DHCP, routing, dan manajemen 
+                            bandwidth. Melakukan beberapa pengujian koneksi antar client untuk memastikan 
+                            konfigurasi berjalan sesuai rencana.
                         </p>
                     </div>
 
                     <div class="journal-entry">
-                        <div class="journal-date">Hari 6-7 - LocalStorage Integration</div>
+                        <div class="journal-date">Tahap Evaluasi</div>
                         <p class="journal-text">
-                            Implementasi LocalStorage untuk data persistence. Belajar tentang JSON.stringify 
-                            dan JSON.parse untuk menyimpan dan retrieve data. Menambahkan fitur filter dan 
-                            improve overall user experience dengan animasi CSS.
-                        </p>
-                    </div>
-
-                    <div class="journal-entry">
-                        <div class="journal-date">Hari 8 - Testing & Polish</div>
-                        <p class="journal-text">
-                            Testing berbagai edge cases, fixing bugs, dan improving code quality. Menambahkan 
-                            error handling dan validasi input. Optimize performance dan menambahkan responsive 
-                            design untuk mobile devices.
+                            Menguji stabilitas jaringan, menganalisis kendala yang muncul, serta melakukan 
+                        troubleshooting dasar untuk memahami penyebab gangguan koneksi.
                         </p>
                     </div>
                 </div>
@@ -295,20 +262,20 @@
                     <h2>Teknologi yang Digunakan</h2>
                     <div class="tech-stack-detail">
                         <div class="tech-item">
-                            <h4>HTML5</h4>
-                            <p>Semantic structure</p>
+                            <h4>Network Simulator</h4>
+                            <p>GNS3 & Cisco Packet Tracer</p>
                         </div>
                         <div class="tech-item">
-                            <h4>CSS3</h4>
-                            <p>Modern styling & animations</p>
+                            <h4>Router Configuration</h4>
+                            <p>Routing dan bandwidth management</p>
                         </div>
                         <div class="tech-item">
-                            <h4>JavaScript ES6</h4>
-                            <p>Core functionality</p>
+                            <h4>IP Networking</h4>
+                            <p>Subnetting dan addressing</p>
                         </div>
                         <div class="tech-item">
-                            <h4>LocalStorage API</h4>
-                            <p>Data persistence</p>
+                            <h4>Troubleshooting</h4>
+                            <p>Analisis masalah jaringan</p>
                         </div>
                     </div>
                 </div>
@@ -318,22 +285,28 @@
                     <h2>Dokumentasi & Screenshot</h2>
                     <div class="gallery">
                         <div class="gallery-item">
-                            <span>Screenshot 1<br>Main Interface</span>
+                            <!-- <img src="screenshot1.jpg" alt="Homepage"> -->
+                            <span>Screenshot 1<br>Homepage Design</span>
                         </div>
                         <div class="gallery-item">
-                            <span>Screenshot 2<br>Add Task Form</span>
+                            <!-- <img src="screenshot2.jpg" alt="About Page"> -->
+                            <span>Screenshot 2<br>About Page</span>
                         </div>
                         <div class="gallery-item">
-                            <span>Screenshot 3<br>Task List View</span>
+                            <!-- <img src="screenshot3.jpg" alt="News Section"> -->
+                            <span>Screenshot 3<br>News Section</span>
                         </div>
                         <div class="gallery-item">
-                            <span>Screenshot 4<br>Filter Feature</span>
+                            <!-- <img src="screenshot4.jpg" alt="Contact Page"> -->
+                            <span>Screenshot 4<br>Contact Form</span>
                         </div>
                         <div class="gallery-item">
-                            <span>Foto 5<br>Mobile View</span>
+                            <!-- <img src="process1.jpg" alt="Development Process"> -->
+                            <span>Foto 5<br>Development Process</span>
                         </div>
                         <div class="gallery-item">
-                            <span>Foto 6<br>Code Structure</span>
+                            <!-- <img src="process2.jpg" alt="Testing"> -->
+                            <span>Foto 6<br>Testing Phase</span>
                         </div>
                     </div>
                 </div>
@@ -342,19 +315,16 @@
                 <div class="content-section">
                     <h2>Yang Saya Pelajari</h2>
                     <p>
-                        Proyek ini sangat membantu saya memahami JavaScript fundamentals dengan lebih baik. 
-                        Saya belajar tentang event-driven programming, state management, dan bagaimana 
-                        membuat aplikasi yang interactive.
+                        Proyek ini membantu saya memahami cara kerja distribusi internet pada jaringan RT/RW Net, 
+                        mulai dari perencanaan topologi hingga manajemen bandwidth.
                     </p>
                     <p>
-                        Pengalaman dengan LocalStorage API memberikan saya insight tentang browser storage 
-                        dan data persistence. Saya juga belajar pentingnya error handling dan input validation 
-                        untuk mencegah bugs dan meningkatkan user experience.
+                        Saya juga belajar pentingnya perencanaan jaringan sebelum implementasi langsung, serta 
+                        bagaimana melakukan troubleshooting ketika koneksi bermasalah.
                     </p>
                     <p>
-                        Challenge dalam membuat aplikasi ini mengajarkan saya untuk lebih teliti dalam 
-                        debugging dan testing. Saya juga lebih menghargai pentingnya clean code dan 
-                        proper documentation.
+                        Walaupun masih simulasi, pengalaman ini memberi dasar kuat untuk pengembangan proyek 
+                        jaringan yang lebih kompleks di masa depan.
                     </p>
                 </div>
             </div>
@@ -364,7 +334,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Muhamad Dafin Rifat Zulfaqqar. Dibuat dengan semangat belajar.</p>
+            <p>&copy; 2026 Muhamad Dafin Rifat Zulfaqqar. Dibuat dengan semangat belajar.</p>
         </div>
     </footer>
 </body>
